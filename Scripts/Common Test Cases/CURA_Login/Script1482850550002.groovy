@@ -22,4 +22,4 @@ WebUI.click(findTestObject('CURA/Login/btn_Login'))
 WebUI.verifyElementPresent(findTestObject('CURA/Appointment/div_Appointment'), GlobalVariable.G_Timeout)
 
 // tutup browser
-WebUI.closeBrowser()
+//WebUI.closeBrowser()
