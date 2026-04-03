@@ -18,53 +18,38 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+import org.openqa.selenium.Keys as Keys
+import com.example.cura.LoginPage
+import com.example.cura.AppointmentPage
+import com.example.cura.AppointmentConfirmationPage
+
 
 WebUI.comment('Story: Book an appointment')
 
-WebUI.comment('Given that the user has logged into their account')
+//RunConfiguration.setWebDriverPreferencesProperty("args", ["--headless", "--disable-gpu", "--window-size=1920,1080"])
 
 WebUI.openBrowser(GlobalVariable.G_SiteURL)
 
-WebUI.callTestCase(findTestCase('Common Test Cases/CURA_Login'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('CURA/Appointment/Page_CURA Healthcare Service/a_btn-make-appointment'))
 
-WebUI.comment('And Appointment page is displayed')
+LoginPage.login('John Doe', 'ThisIsNotAPassword')
 
-if (true) {
-    WebUI.selectOptionByLabel(findTestObject('CURA/Appointment/lst_Facility'), 'Hongkong CURA Healthcare Center', false)
+WebUI.comment('Fill appointment form')
 
-    WebUI.check(findTestObject('CURA/Appointment/chk_Medicaid'))
+AppointmentPage.fillAppointmentForm('Hongkong CURA Healthcare Center', '27/12/2016', 'Please make appointment as soon as possible.')
 
-    WebUI.check(findTestObject('CURA/Appointment/chk_Readmission'))
+AppointmentPage.submitAppointment()
 
-    WebUI.setText(findTestObject('CURA/Appointment/txt_VisitDate'), '27/12/2016')
+WebUI.comment('Verify confirmation')
 
-    WebUI.setText(findTestObject('CURA/Appointment/txt_Comment'), 'Please make appointment as soon as possible.')
-}
+AppointmentConfirmationPage.verifyConfirmation('Hongkong CURA Healthcare Center', 'Yes', 'Medicaid', '27/12/2016', 'Please make appointment as soon as possible.')
 
-WebUI.comment('When he fills in valid information in Appointment page')
+//WebUI.takeScreenshot('Reports/TC2_Appointment.png')
 
-WebUI.click(findTestObject('CURA/Appointment/btn_BookAppointment'))
+//WebUI.takeScreenshot('C:/Users/teuku/Katalon Studio/Personal Portfolio Erza/Reports/TC2_Appointment.png')
 
-WebUI.verifyTextPresent('Appointment Confirmation', false)
-
-WebUI.comment('Then he should be able to book a new appointment')
-
-if (true) {
-    WebUI.verifyMatch('Hongkong CURA Healthcare Center', WebUI.getText(findTestObject('CURA/AppointmentConfirmation/lbl_Facility')), 
-        false)
-
-    WebUI.verifyMatch('Yes', WebUI.getText(findTestObject('CURA/AppointmentConfirmation/lbl_HospitalReadmission')), false)
-
-    WebUI.verifyMatch('Medicaid', WebUI.getText(findTestObject('CURA/AppointmentConfirmation/lbl_Program')), false)
-
-    WebUI.verifyMatch('27/12/2016', WebUI.getText(findTestObject('CURA/AppointmentConfirmation/lbl_VisitDate')), false)
-
-    WebUI.verifyMatch('Please make appointment as soon as possible.', WebUI.getText(findTestObject('CURA/AppointmentConfirmation/lbl_Comment')), 
-        false)
-}
-
-WebUI.takeScreenshot()
-WebUI.closeBrowser()
 
 

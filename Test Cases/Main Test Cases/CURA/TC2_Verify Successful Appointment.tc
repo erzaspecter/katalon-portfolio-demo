@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Verify if users can book an appointment sucessfully.
-Pre-condition: Users have already logged in
-
-Steps:
-- Fill in appoinment's information
-- Click on appointment's button
-
-Expected results:
+   <description>Verify if users can book an appointment sucessfully.&#xd;
+Pre-condition: Users have already logged in&#xd;
+&#xd;
+Steps:&#xd;
+- Fill in appoinment's information&#xd;
+- Click on appointment's button&#xd;
+&#xd;
+Expected results:&#xd;
 Appointment Confirmation page is displayed</description>
    <name>TC2_Verify Successful Appointment</name>
    <tag></tag>
-   <comment>Story: Book an appointment
-Given that the user has logged into their account
-And Appointment page is displayed
-When he fills in valid information in Appointment page
+   <comment>Story: Book an appointment&#xd;
+Given that the user has logged into their account&#xd;
+And Appointment page is displayed&#xd;
+When he fills in valid information in Appointment page&#xd;
 Then he should be able to book a new appointment</comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>c880ce98-5804-476f-88e9-c34919fccc5d</testCaseGuid>
