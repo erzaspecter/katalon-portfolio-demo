@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>OrangeHRM_NavigateToEmployee.groovy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6a6ba6d3-4b25-4925-91b1-3e488ee2b635</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC2_AddEmployee.groovy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4fdfd665-4dd6-4d9c-800e-cc11f859f36e</testCaseGuid>
+</TestCaseEntity>

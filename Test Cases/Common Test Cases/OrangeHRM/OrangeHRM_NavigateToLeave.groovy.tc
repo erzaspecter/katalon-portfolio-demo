@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>OrangeHRM_NavigateToLeave.groovy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b8afd85b-e57d-4692-bbf1-1c06d1c6b37f</testCaseGuid>
+</TestCaseEntity>

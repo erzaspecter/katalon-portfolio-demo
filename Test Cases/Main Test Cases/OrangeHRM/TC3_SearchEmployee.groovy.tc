@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC3_SearchEmployee.groovy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b0b4f43e-48db-4d01-a2c8-0e613bde4dfa</testCaseGuid>
+</TestCaseEntity>

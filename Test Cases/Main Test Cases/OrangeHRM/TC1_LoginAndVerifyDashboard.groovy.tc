@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC1_LoginAndVerifyDashboard.groovy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>118847ff-a760-4466-b506-6ba8738d9e8c</testCaseGuid>
+</TestCaseEntity>

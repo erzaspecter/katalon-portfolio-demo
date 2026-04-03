@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC5_VerifyLeaveStatus.groovy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e85988ca-086b-47c9-8fc4-b918de491da5</testCaseGuid>
+</TestCaseEntity>
